@@ -111,13 +111,17 @@ public class MainActivity extends AppCompatActivity {
 
                    String linea ="";
                    while((linea = br.readLine())!=null){
-                       total+=linea;
+                       total+=linea+"\n";
                    }
                    br.close();
                    inputStream.close();
 
                }
-
+               try {
+                   Thread.sleep(2000);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
 
 
            } catch (MalformedURLException e) {
